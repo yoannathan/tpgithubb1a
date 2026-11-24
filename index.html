@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cours pratique pour apprendre Git et GitHub en créant et publiant un site web.">
+  <title>Git & GitHub — Cours pratique</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navigation principale">
+      <a class="brand" href="#accueil"><span class="brand-mark">&lt;/&gt;</span> Git<span>&amp;</span>GitHub</a>
+      <div class="nav-links">
+        <a href="#notions">Notions</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#commandes">Commandes</a>
+        <a href="#pratique">Pratique</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Cours complet et pratique pour débutants</p>
+          <h1>Apprendre Git en construisant un site web.</h1>
+          <p class="hero-copy">Comprenez la gestion de versions, publiez votre projet sur GitHub et adoptez un workflow fiable, de la première ligne de code au déploiement.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#pratique">Commencer le parcours</a>
+            <a class="button button-ghost" href="#commandes">Voir les commandes</a>
+          </div>
+          <p class="author">Support de formation par <strong>Kevin Noël Fonkoua Tatant</strong> · PHD Student (UEB)</p>
+        </div>
+        <div class="terminal-card" aria-label="Exemple de terminal Git">
+          <div class="terminal-top"><span></span><span></span><span></span><small>monsiteweb ~ main</small></div>
+          <pre><code><span class="muted">$</span> git init
+<span class="muted">$</span> git add .
+<span class="muted">$</span> git commit -m <span class="green">"Premier commit"</span>
+<span class="muted">$</span> git push -u origin main
+
+<span class="green">✓ Projet publié sur GitHub</span></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="notions" class="section container">
+      <div class="section-heading"><p class="eyebrow">01 · Les fondamentaux</p><h2>Git et GitHub : deux outils complémentaires</h2><p>Git travaille sur votre ordinateur. GitHub héberge et partage le dépôt en ligne.</p></div>
+      <div class="comparison-grid">
+        <article class="info-card accent-blue"><div class="icon">G</div><h3>Git</h3><p>Logiciel de gestion de versions qui conserve l’historique de vos fichiers et permet de revenir à un état connu.</p><ul><li>Historique local</li><li>Commits et branches</li><li>Fonctionne hors connexion</li></ul></article>
+        <article class="info-card accent-orange"><div class="icon">GH</div><h3>GitHub</h3><p>Plateforme en ligne qui héberge une copie distante du dépôt et facilite la collaboration.</p><ul><li>Push et pull</li><li>Issues et Pull Requests</li><li>Publication avec GitHub Pages</li></ul></article>
+      </div>
+      <div class="vocabulary"><div><strong>Dépôt</strong><span>Dossier suivi par Git</span></div><div><strong>Commit</strong><span>Instantané enregistré</span></div><div><strong>Branche</strong><span>Ligne de développement</span></div><div><strong>Remote</strong><span>Dépôt distant</span></div></div>
+    </section>
+
+    <section id="workflow" class="section section-soft">
+      <div class="container"><div class="section-heading"><p class="eyebrow">02 · Le cycle essentiel</p><h2>Modifier → vérifier → enregistrer → publier</h2><p>Ce cycle simple évite les erreurs et rend chaque évolution lisible.</p></div>
+        <div class="steps"><div class="step"><span>01</span><h3>Modifier</h3><p>Travaillez dans votre éditeur et sauvegardez les fichiers.</p></div><div class="step"><span>02</span><h3>Contrôler</h3><p>Utilisez <code>git status</code> et <code>git diff</code> pour inspecter.</p></div><div class="step"><span>03</span><h3>Préparer</h3><p>Ajoutez uniquement les fichiers attendus avec <code>git add</code>.</p></div><div class="step"><span>04</span><h3>Committer</h3><p>Enregistrez un changement cohérent avec un message clair.</p></div><div class="step"><span>05</span><h3>Publier</h3><p>Envoyez l’historique distant avec <code>git push</code>.</p></div></div>
+      </div>
+    </section>
+
+    <section id="commandes" class="section container">
+      <div class="section-heading"><p class="eyebrow">03 · Boîte à outils</p><h2>Les commandes à retenir</h2></div>
+      <div class="command-table" role="table" aria-label="Commandes Git essentielles"><div class="table-row table-head" role="row"><span>Commande</span><span>Rôle</span></div><div class="table-row"><code>git init</code><span>Initialiser un dépôt local</span></div><div class="table-row"><code>git status</code><span>Voir l’état des fichiers</span></div><div class="table-row"><code>git add fichier</code><span>Préparer un fichier</span></div><div class="table-row"><code>git commit -m "message"</code><span>Enregistrer un instantané</span></div><div class="table-row"><code>git log --oneline</code><span>Consulter l’historique</span></div><div class="table-row"><code>git push</code><span>Envoyer les commits vers GitHub</span></div><div class="table-row"><code>git pull</code><span>Récupérer et intégrer les changements distants</span></div><div class="table-row"><code>git switch -c nom</code><span>Créer une branche et s’y placer</span></div></div>
+    </section>
+
+    <section id="pratique" class="section section-dark">
+      <div class="container practice-grid"><div><p class="eyebrow light">04 · Projet fil rouge</p><h2>MonSiteWeb, de zéro à GitHub Pages.</h2><p>Créez une page d’accueil avec des sections À propos, Services et Contact. Versionnez-la, développez une fonctionnalité sur une branche, puis publiez le résultat.</p><a class="button button-light" href="#securite">Suivre les bonnes pratiques</a></div><div class="checklist"><div>✓ <span>Créer <code>index.html</code> et <code>style.css</code></span></div><div>✓ <span>Initialiser Git et produire des commits utiles</span></div><div>✓ <span>Créer une branche pour les Témoignages</span></div><div>✓ <span>Fusionner après vérification</span></div><div>✓ <span>Activer GitHub Pages depuis <code>main</code></span></div></div></div>
+    </section>
+
+    <section id="securite" class="section container safety"><div class="warning"><strong>À retenir avant de publier</strong><p>Ne commitez jamais de mot de passe, clé API, jeton ou donnée privée. Ajoutez <code>.env</code>, les fichiers temporaires et les secrets à votre <code>.gitignore</code>. Un secret déjà publié doit être révoqué : le supprimer dans un nouveau commit ne suffit pas.</p></div></section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><span>Git &amp; GitHub · MonSiteWeb</span><span>Apprendre. Versionner. Publier.</span></div></footer>
+</body>
+</html>
